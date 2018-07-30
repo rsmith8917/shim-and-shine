@@ -29,7 +29,7 @@ passport.use(new LocalStrategy(function(username, password, done) {
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  res.render('index');
+  res.render('index', { user: req.user });
 });
 
 router.get('/login', function (req, res, next) {
