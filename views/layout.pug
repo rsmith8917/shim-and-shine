@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='javascript', href='/javascripts/bootstrap.bundle.min.js')
+
+    nav.navbar.navbar-expand-lg.navbar-dark.fixed-top(style='background-color: #000000')
+      .container
+        a.navbar-brand(href='/') SHIM AND SHINE
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarSupportedContent.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto
+            li.nav-item.px-3
+              a.nav-link(href='/profile') profile
+
+  body
+    .container.mt-3
+      block content
