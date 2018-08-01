@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1 Admin Items Page
+  p
+  table.table
+    thead
+      tr
+        th ID
+        th Name
+        th Description
+        th Edit
+        th Delete
+    tbody
+      each item
+      tr
+        td 1
+        td Item 1
+        td Best Item Ever
+        td
+          a(href='#').btn.btn-primary Edit
+        td
+          a(href='#').btn.btn-danger Delete
