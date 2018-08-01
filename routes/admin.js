@@ -2,8 +2,10 @@ var express = require('express');
 var router = express.Router();
 
 
-router.get('/', function(req, res, next) {
-  res.render('admin page');
-});
+router.get('/',
+  require('connect-ensure-login').ensureLoggedIn('/auth/login'),
+  function (req, res) {
+    res.render('admin', { user: req.user });
+  });
 
 module.exports = router;

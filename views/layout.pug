@@ -8,21 +8,18 @@ html
 
     nav.navbar.navbar-expand-lg.navbar-dark.fixed-top(style='background-color: #000000')
       .container
-        a.navbar-brand(href='/') SHIM AND SHINE
+        a.navbar-brand(href='/') TEST
         button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
           span.navbar-toggler-icon
         #navbarSupportedContent.collapse.navbar-collapse
           ul.navbar-nav.ml-auto
-            li.nav-item.px-3
-              a.nav-link(href='/profile') profile
             if user
+              .navbar-text.px-3
+                | Hello, #{user.firstName}
               li.nav-item.px-3
-                | Hello, #{user.username}
-                a.nav-link(href='/logout') Log Out
-            else
+                a.nav-link(href='/admin') Admin
               li.nav-item.px-3
-                a.nav-link(href='/login') Log In
-
+                a.nav-link(href='/auth/logout') Log Out
   body
-    .container.mt-3
+    .container.my-3
       block content
